@@ -3,7 +3,7 @@ namespace api.Domain.Entities;
 public class Person
 {
     public Guid Id { get; set; } = Guid.NewGuid();
-    public string Nome { get; set; } = string.Empty;
+    public string Name { get; set; } = string.Empty;
     // using string.Empty; just to stop the possably null error, but i guess its secure too
 
 }

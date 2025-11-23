@@ -18,4 +18,8 @@
     <Using Include="Xunit" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\api\cartao-vacinacao-api.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,6 +1,8 @@
-namespace api.Models;
+using System.Collections.Generic;
 
-public class Vaccine
+namespace api.Domain.Entities;
+
+public class Person
 {
     public int Id { get; set; }
     public string Name { get; set; } = string.Empty;

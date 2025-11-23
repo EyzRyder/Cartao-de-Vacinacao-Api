@@ -10,7 +10,7 @@ public class VaccinationRecord
     public Person Person { get; set; } = default!;
 
     public Guid VaccineId { get; set; }
-    public Person Vaccine { get; set; } = default!;
+    public Vaccine Vaccine { get; set; } = default!;
 
     public Dose Dose { get; set; }   // será salva como string no banco
     public DateTime DateAplication { get; set; } = DateTime.UtcNow;

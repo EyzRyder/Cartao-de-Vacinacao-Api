@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cartao-vacinacao-api", "api\cartao-vacinacao-api.csproj", "{C8EFE5E1-4D96-40D5-ADCF-F4F57300C4CD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tests", "tests\tests.csproj", "{F5150ADA-7629-4296-A9AA-72C5FF783F12}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{C8EFE5E1-4D96-40D5-ADCF-F4F57300C4CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8EFE5E1-4D96-40D5-ADCF-F4F57300C4CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8EFE5E1-4D96-40D5-ADCF-F4F57300C4CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5150ADA-7629-4296-A9AA-72C5FF783F12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5150ADA-7629-4296-A9AA-72C5FF783F12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5150ADA-7629-4296-A9AA-72C5FF783F12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5150ADA-7629-4296-A9AA-72C5FF783F12}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -3,16 +3,26 @@ using FluentValidation;
 using FluentValidation.AspNetCore;
 
 
+using api.Domain.Interfaces;
+using api.Infrastructure.Repositories;
+
 namespace api.Configurations;
 
 public static class DependencyInjectionConfig
 {
     public static IServiceCollection AddDependencyInjectionConfiguration(this IServiceCollection services)
     {
+        // Validators
         services.AddFluentValidationAutoValidation();
         services.AddValidatorsFromAssembly(typeof(PersonCreateValidator).Assembly);
         services.AddValidatorsFromAssembly(typeof(VaccineCreateValidator).Assembly);
         services.AddValidatorsFromAssembly(typeof(VaccinationRecordCreateValidator).Assembly);
+
+        // Repositories
+        services.AddScoped<IPersonRepository, PersonRepository>();
+        services.AddScoped<IVaccineRepository, VaccineRepository>();
+        services.AddScoped<IVaccinationRecordRepository, VaccinationRecordRepository>();
+
 
         return services;
     }

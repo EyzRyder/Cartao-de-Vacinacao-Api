@@ -7,15 +7,13 @@ public class VaccinationRecordCreateValidator : AbstractValidator<VaccinationRec
 {
     public VaccinationRecordCreateValidator()
     {
-        RuleFor(x => x.VacinaId)
-            .NotEmpty().WithMessage("VacinaId é obrigatório.");
+        RuleFor(x => x.VaccineId)
+            .NotEmpty().WithMessage("VacineId é obrigatório.");
+        RuleFor(x => x.PersonId)
+            .NotEmpty().WithMessage("PersonId é obrigatório.");
 
         RuleFor(x => x.Dose)
             .NotEmpty().WithMessage("A dose é obrigatória.")
             .IsInEnum().WithMessage("Dose inválida.");
-
-        RuleFor(x => x.DateAplication)
-            .LessThanOrEqualTo(DateTime.UtcNow)
-            .WithMessage("A data de aplicação não pode ser no futuro.");
     }
 }

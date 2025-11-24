@@ -45,7 +45,7 @@ public class VaccinationRecordController : ControllerBase
     [HttpPost]
     [ProducesResponseType(typeof(Guid), StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public async Task<IActionResult> Create(VaccinationRecordDto dto)
+    public async Task<IActionResult> Create(VaccinationRecordCreateDto dto)
     {
         try
         {

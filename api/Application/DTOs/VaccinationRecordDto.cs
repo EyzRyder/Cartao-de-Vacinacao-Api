@@ -6,7 +6,7 @@ public record VaccinationRecordDto
 (
     Guid Id,
     Guid PersonId ,
-    Guid VaccinId,
+    Guid VaccineId,
     Dose Dose ,
     DateTime DateAplication
 );
@@ -15,7 +15,6 @@ public record VaccinationRecordDto
 public record VaccinationRecordCreateDto
 (
     Dose Dose,
-    DateTime DateAplication,
     Guid PersonId ,
-    Guid VaccinId
+    Guid VaccineId
 );

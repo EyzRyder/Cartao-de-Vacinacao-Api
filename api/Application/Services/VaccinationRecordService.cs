@@ -43,13 +43,13 @@ public class VaccinationRecordService : IVaccinationRecordService
         return _mapper.Map<VaccinationRecordDto?>(vac);
     }
 
-    public async Task<Guid> CreateAsync(VaccinationRecordDto dto)
+    public async Task<Guid> CreateAsync(VaccinationRecordCreateDto dto)
     {
         var person = await _personRepository.GetByIdAsync(dto.PersonId);
         if (person == null)
             throw new Exception("Person não encontrada");
 
-        var vaccine = await _vaccineRepository.GetByIdAsync(dto.VaccinId);
+        var vaccine = await _vaccineRepository.GetByIdAsync(dto.VaccineId);
         if (vaccine == null)
             throw new Exception("Vaccine não encontrada");
 

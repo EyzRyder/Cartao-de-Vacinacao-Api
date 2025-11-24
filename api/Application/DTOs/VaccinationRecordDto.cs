@@ -10,3 +10,12 @@ public record VaccinationRecordDto
     Dose Dose ,
     DateTime DateAplication
 );
+
+
+public record VaccinationRecordCreateDto
+(
+    Dose Dose,
+    DateTime DateAplication,
+    Guid PersonId ,
+    Guid VaccinId
+);

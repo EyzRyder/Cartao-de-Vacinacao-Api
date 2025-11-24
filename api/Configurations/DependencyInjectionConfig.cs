@@ -1,3 +1,4 @@
+using api.Application.Services;
 using api.Application.Validators;
 using FluentValidation;
 using FluentValidation.AspNetCore;
@@ -23,6 +24,10 @@ public static class DependencyInjectionConfig
         services.AddScoped<IVaccineRepository, VaccineRepository>();
         services.AddScoped<IVaccinationRecordRepository, VaccinationRecordRepository>();
 
+        // Services
+        services.AddScoped<IPersonService, PersonService>();
+        services.AddScoped<IVaccineService, VaccineService>();
+        services.AddScoped<IVaccinationRecordService, VaccinationRecordService>();
 
         return services;
     }

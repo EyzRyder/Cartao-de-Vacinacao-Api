@@ -33,7 +33,7 @@ public class VaccinesController : ControllerBase
 
     [HttpPost]
     [ProducesResponseType(typeof(Guid), StatusCodes.Status201Created)]
-    public async Task<IActionResult> Create(VaccineDto dto)
+    public async Task<IActionResult> Create(VaccineCreateDto dto)
     {
         var id = await _vaccineService.CreateAsync(dto);
         return CreatedAtAction(nameof(GetById), new { id }, id);

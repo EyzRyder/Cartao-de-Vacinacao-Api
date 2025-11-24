@@ -28,7 +28,7 @@ public class VaccineService : IVaccineService
         return _mapper.Map<VaccineDto?>(vaccine);
     }
 
-    public async Task<Guid> CreateAsync(VaccineDto dto)
+    public async Task<Guid> CreateAsync(VaccineCreateDto dto)
     {
         var entity = _mapper.Map<Vaccine>(dto);
         await _vaccineRepository.AddAsync(entity);

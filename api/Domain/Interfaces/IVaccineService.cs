@@ -6,7 +6,7 @@ public interface IVaccineService
 {
     Task<IEnumerable<VaccineDto>> GetAllAsync();
     Task<VaccineDto?> GetByIdAsync(Guid id);
-    Task<Guid> CreateAsync(VaccineDto dto);
+    Task<Guid> CreateAsync(VaccineCreateDto dto);
     Task<bool> UpdateAsync(Guid id, VaccineDto dto);
     Task<bool> DeleteAsync(Guid id);
 }

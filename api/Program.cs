@@ -20,7 +20,8 @@ builder.Services.AddControllers()
     });
 
 
-
+// AutoMapper
+builder.Services.AddAutoMapperConfiguration();
 
 var app = builder.Build();
 

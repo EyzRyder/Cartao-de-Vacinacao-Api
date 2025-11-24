@@ -11,6 +11,7 @@ public class VaccinationRecordCreateValidator : AbstractValidator<VaccinationRec
             .NotEmpty().WithMessage("VacinaId é obrigatório.");
 
         RuleFor(x => x.Dose)
+            .NotEmpty().WithMessage("A dose é obrigatória.")
             .IsInEnum().WithMessage("Dose inválida.");
 
         RuleFor(x => x.DateAplication)

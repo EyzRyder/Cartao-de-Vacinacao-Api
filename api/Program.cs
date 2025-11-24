@@ -26,12 +26,17 @@ builder.Services.AddAutoMapperConfiguration();
 var app = builder.Build();
 
 // Swagger pipeline
-if (app.Environment.IsDevelopment())
-{
+
+// if (app.Environment.IsDevelopment())
+// {
 app.UseSwaggerConfiguration();
 
-}
+// }
 // app.UseHttpsRedirection();
+
+app.UseRouting();
+
+app.UseAuthorization();
 
 app.MapControllers();
 

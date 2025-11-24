@@ -53,6 +53,7 @@ classDiagram
 - 🔒 Authentication & Login
 - 🛡️ Middleware to check authentication
 - [🔍Verefy the OWASP cheat sheet if there is any pending problem.](https://cheatsheetseries.owasp.org/Glossary.html)
+- implament Docker
 
 
 # Documentation of the process

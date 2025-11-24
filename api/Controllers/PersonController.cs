@@ -38,7 +38,7 @@ public class PersonsController : ControllerBase
     [HttpPost]
     [ProducesResponseType(typeof(Guid), StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public async Task<IActionResult> Create([FromBody] PersonDto dto)
+    public async Task<IActionResult> Create([FromBody] PersonCreateDto dto)
     {
         var id = await _personService.CreateAsync(dto);
         return CreatedAtAction(nameof(GetById), new { id }, id);

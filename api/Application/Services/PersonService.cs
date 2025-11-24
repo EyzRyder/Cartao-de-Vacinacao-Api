@@ -33,7 +33,7 @@ public class PersonService : IPersonService
         return _mapper.Map<PersonDto?>(person);
     }
 
-    public async Task<Guid> CreateAsync(PersonDto dto)
+    public async Task<Guid> CreateAsync(PersonCreateDto dto)
     {
         var entity = _mapper.Map<Person>(dto);
         await _personRepository.AddAsync(entity);

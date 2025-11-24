@@ -1,7 +1,7 @@
 namespace api.Application.DTOs;
 
-public class PersonDto : PersonCreateDto
-{
-    public Guid Id { get; set; }
-    
-}
+public record PersonDto 
+(
+    Guid Id,
+    string Name
+);

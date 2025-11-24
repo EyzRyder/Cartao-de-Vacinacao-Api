@@ -1,3 +1,4 @@
+using api.Domain.Entities;
 using api.Domain.Enums;
 
 namespace api.Application.DTOs;
@@ -5,8 +6,8 @@ namespace api.Application.DTOs;
 public record VaccinationRecordDto
 (
     Guid Id,
-    Guid PersonId ,
-    Guid VaccineId,
+    PersonDto Person ,
+    VaccineDto Vaccine,
     Dose Dose ,
     DateTime DateAplication
 );

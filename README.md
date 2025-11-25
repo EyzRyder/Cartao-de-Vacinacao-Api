@@ -7,33 +7,30 @@ This project has 3 main entities:
 - Person
 - Vaccine
 - VaccinationRecord
-
+```mermaid
 classDiagram
-    class Person {
+
+ class Person {
+        Guid Id
+        string Name
+        VaccinationRecords VaccinationRecords
+    }
+ class Vaccine {
         Guid Id
         string Name
         List<VaccinationRecord> VaccinationRecords
     }
-
-    class Vaccine {
-        Guid Id
-        string Name
-        List<VaccinationRecord> VaccinationRecords
-    }
-
-    class VaccinationRecord {
+ class VaccinationRecord {
         Guid Id
         Guid PersonId
         Guid VaccineId
         Dose Dose
         DateTime DateAplication
-        Person Person
-        Vaccine Vaccine
     }
 
     Person "1" --> "many" VaccinationRecord : has
     Vaccine "1" --> "many" VaccinationRecord : has
-
+```
 ## ⚙️ Tech Stack:
 - .NET 9
 - EF Core + SQLite
@@ -55,6 +52,8 @@ classDiagram
 - ✅ Unit Tests (xUnit + FluentAssertions + Mocks)
 - 🔒 Authentication & Login
 - 🛡️ Middleware to check authentication
+- [🔍Verefy the OWASP cheat sheet if there is any pending problem.](https://cheatsheetseries.owasp.org/Glossary.html)
+- implament Docker
 
 
 # Documentation of the process

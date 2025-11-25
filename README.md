@@ -145,7 +145,7 @@ dotnet ef migrations remove
 6. Run the API
 To run the api:
 ```bash
-dotnet run
+dotnet run --project api/cartao-vacinacao-api.csproj
 ```
 
 Swagger UI will be available at: 

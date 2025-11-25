@@ -16,14 +16,14 @@ builder.Services.AddDependencyInjectionConfiguration();
 builder.Services.AddControllers()
     .AddJsonOptions(options =>
     {
-        options.JsonSerializerOptions.PropertyNamingPolicy = null;
+        options.JsonSerializerOptions.PropertyNamingPolicy = System.Text.Json.JsonNamingPolicy.CamelCase;
     });
 
 
 // AutoMapper
 builder.Services.AddAutoMapperConfiguration();
 
-// CORS 
+// CORS
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll", policy =>
@@ -45,11 +45,10 @@ app.UseSwaggerConfiguration();
 
 app.UseRouting();
 
-app.UseCors("AllowAll");  
+app.UseCors("AllowAll");
 
 app.UseAuthorization();
 
 app.MapControllers();
 
 app.Run();
-

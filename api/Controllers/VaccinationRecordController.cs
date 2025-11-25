@@ -24,11 +24,11 @@ public class VaccinationRecordController : ControllerBase
     }
 
     /// <summary>Lista vacinações de uma pessoa específica.</summary>
-    [HttpGet("pessoa/{pessoaId:guid}")]
+    [HttpGet("person/{personId:guid}")]
     [ProducesResponseType(typeof(IEnumerable<VaccinationRecordDto>), StatusCodes.Status200OK)]
-    public async Task<IActionResult> GetByPessoaId(Guid pessoaId)
+    public async Task<IActionResult> GetByPessoaId(Guid personId)
     {
-        return Ok(await _service.GetByPersonIdAsync(pessoaId));
+        return Ok(await _service.GetByPersonIdAsync(personId));
     }
 
     /// <summary>Busca uma vacinação pelo ID.</summary>
